@@ -1,0 +1,148 @@
+//∂©µ•œÍ«ÈorderItem
+.fix{
+  *zoom: 1;
+  &:after{
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+.orderDo{
+
+}
+.orderDoBox{
+  //transform: translate3d(0,-150px,0);
+  //-webkit-transform: translate3d(0,-150px,0);
+  //-moz-transform: translate3d(0,-150px,0);
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 120px;
+  //height: 100px;
+  background: #c7c7c7;
+  border-radius: 3px;
+  z-index: 10;
+  &:after{
+    content: ' ';
+    background: #c7c7c7;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 10px;
+    top: -4px;
+    border-radius: 1px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+  }
+  ul{
+    padding: 0 10px;
+    margin: 0;
+    li{
+      font-size: .75rem;
+      list-style: none;
+      color: #444444;
+      text-align: center;
+      line-height: 32px;
+      &:nth-child(2){
+        border-top: 1px #999 solid;
+        border-bottom: 1px #999 solid;
+      }
+    }
+  }
+}
+.orderItem{
+  p{
+    margin-left: 15px;
+  }
+}
+.orderItemInfo{
+  margin-top: 10px;
+  background: #fff;
+  ul{
+    margin: 0;
+    padding: 0;
+    li{
+      .fix;
+      &:last-child{
+        border: none;
+      }
+      margin: 0 15px;
+      position: relative;
+      height: 45px;
+      line-height: 45px;
+      list-style: none;
+      border-bottom: 1px #f4f4f4 solid;
+      .tit{
+        float: left;
+        width: 80px;
+        color: #333;
+      }
+      .txt{
+        float: left;
+        color: #999;
+        //overflow: hidden;
+        //white-space: nowrap;
+        //text-overflow:ellipsis;
+      }
+      &.lastLi{
+        border: none;
+        background: #f4f4f4;
+        color: #ff8500;
+        margin: 0;
+        padding-left: 15px;
+        &:after{
+          display: inline-block;
+          position: absolute;
+          right: 10px;
+          top:15px;
+          width: 8px;
+          height: 14px;
+          background-image: url(../img/listRight.png?__sprite);
+          content: "";
+        }
+      }
+      &.addr{
+        height: auto;
+        min-height: 45px;
+        .tit {
+          position: absolute;
+          left: 0;
+        }
+        .txt{
+          margin-left: 80px;
+          //line-height: 30px;
+        }
+
+      }
+      &.waresInfo{
+        height: 80px;
+        .imgBox{
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 60px;
+          height: 60px;
+          border: 1px #bbbbbb solid;
+          img{
+            width: 100%;
+          }
+        }
+        .txt{
+          margin-left: 80px;
+          line-height: 40px;
+          p{
+            margin: 0;
+            &:first-child{
+              color: #1a1a1a;
+            }
+            span{
+              color: #ff2d55;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

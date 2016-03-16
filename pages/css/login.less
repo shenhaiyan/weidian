@@ -1,0 +1,111 @@
+//弹出层登陆页样式
+.login-screen-content{
+  width:100%;
+  height:100%;
+  background: url("/mt_mall/pages/img/login.svg") no-repeat ;
+  background-size:100% 100%;
+  //background: #ff8500;
+  text-align: center;
+  .loginLogo{
+    margin-top: 50px;
+    width: 112px;
+    height: 110px;
+    display: inline-block;
+    background :url("../img/logo.png?__sprite") no-repeat;
+  }
+  .loginContent{
+//    position: absolute;
+//    left: 10%;
+//    top: 35%;
+    margin: 15px auto 80px auto;
+    width: 80%;
+    .itemInput{
+      position: relative;
+      width:100%;
+      height:44px;
+      line-height: 44px;
+      border-radius:30px;
+      box-sizing:border-box;
+      margin: 0 auto 18px;
+      background: rgba(255,255,255,.8);
+      i{
+        position: absolute;
+        top: 14px;
+        left: 24px;
+        display: inline-block;
+      }
+      .inputBox{
+        margin-left:60px;
+        input{
+          width: 100%;
+          background: transparent;
+          border: none;
+          color: #ff8500;
+          font-size: .875em;
+          &::-webkit-input-placeholder{
+            color:#fac58a;
+          }
+        }
+      }
+    }
+  }
+  .loginButton{
+//    position:absolute;
+//    bottom:45px;
+//    left:10%;
+    margin: 0 auto;
+    width:80%;
+    .btnLogin{
+      background: #fff;
+      color: #ff8500;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+      border-radius:30px;
+      letter-spacing: 6px;
+      text-indent: 6px;
+      width:100%;
+      font-size: 1em;
+      font-weight: 700;
+    }
+  }
+}
+.loginTit{
+  position: relative;
+  margin : 0 auto 35px auto;
+  width: 90%;
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: 6px;
+  text-indent: 6px;
+  &:before{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 35%;
+    height: 1px;
+    background: #fff;
+    display: block;
+    content: "";
+  }
+  &:after{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 35%;
+    height: 1px;
+    background: #fff;
+    display: block;
+    content: "";
+  }
+}
+.userIco{
+  width: 15px;
+  height: 17px;
+  background: url("../img/User.png?__sprite") no-repeat;
+}
+.passwordIco{
+  width: 15px;
+  height: 18px;
+  background: url("../img/password.png?__sprite") no-repeat;
+}

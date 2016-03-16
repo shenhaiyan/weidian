@@ -1,0 +1,136 @@
+//¶©µ¥order
+.wdOrder{
+  .list-block{
+    margin: 0;
+    padding: 0;
+  }
+  .buttons-row{
+    margin-bottom: 10px;
+    position: relative;
+    .orderRowLine{
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      border: 1px #ff8500 solid;
+      width: 32%;
+    }
+    .button{
+      position: relative;
+      background: #fff;
+      height: 40px;
+      color: #666;
+      border: none;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      line-height: 40px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      &.active{
+        background: #fff;
+        color: #ff8500;
+      }
+      &:first-child,&:last-child{
+        border: none;
+      }
+    }
+  }
+}
+.orderWrap{
+  .buttons-row{
+    .button{
+      background: #f3f3f3;
+      height: 50px;
+      padding: 5px 0;
+      p{
+        margin: 0;
+        height: 20px;
+        line-height: 20px;
+        font-size: .75rem;
+        &:first-child{
+          font-size: 1.42rem;
+          font-weight: bold;
+          line-height: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+.noData{
+  text-align: center;
+  color: #111;
+  margin-top: 40px;
+}
+.orderNum{
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  min-width: 15px;
+  height: 15px;
+  background: #ff8500;
+  color: #fff;
+  font-size: .75rem;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 20px;
+  padding: 0 3px;
+}
+.orderLi{
+  position: relative;
+  height: 120px;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 10px;
+  &:before{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top:60px;
+    width: 8px;
+    height: 14px;
+    background-image: url(../img/listRight.png?__sprite);
+    content: "";
+  }
+  .imgBox{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 80px;
+    height: 80px;
+    border: 1px #bbb solid;
+    box-sizing: border-box;
+    display:table-cell;
+    vertical-align:middle;
+    img{
+      width: 100%;
+    }
+  }
+}
+.orderTxt{
+  box-sizing: border-box;
+  padding: 18px 25px 0 105px;
+  p{
+    color: #999;
+    margin: 0;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    font-size: .875rem;
+    span{
+      color: #666;
+    }
+  }
+}
+.orderState{
+  font-size: .75em;
+  margin-top: 8px;
+  color: #bbbbbb;
+  span:last-child{
+    color: #ff2d55;
+    float: right;
+  }
+}

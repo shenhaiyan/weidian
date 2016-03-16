@@ -1,0 +1,81 @@
+.navbar
+  .navbar-inner
+    .left
+      a(href="#").back.link
+        i.wdIcon.wdIconBack
+    .center.sliding 订单详情
+    .right
+      a.link.orderDo 处理
+    .orderDoBox
+      ul
+        li#1.confirm-ok 发货
+        li#2.confirm-ok 签收
+        li#3.confirm-ok 取消
+.pages.navbar-through
+  .page(data-page="orderItem")
+    .page-content.orderItem
+      .shopMb
+        script(id="shopMb" type="text/template7")
+          .orderItemInfo
+            ul
+              li
+                .tit 订单编号
+                .txt {{oid}}
+              li
+                .tit 下单帐号
+                .txt {{receivemobile}}
+              li
+                .tit 订单类型
+                .txt {{payTypeHelper paytype}}
+              li
+                .tit 订单状态
+                .txt#orderstatus {{rdStaHelper orderstatus}}
+              //li.lastLi
+              //  span 6天后自动确认收货
+          p 收货人信息
+          .orderItemInfo
+            ul
+              li
+                .tit 电话
+                .txt {{receivemobile}}
+              li.addr
+                .tit 地址
+                .txt {{receiveaddr}}
+          p 商品信息
+          .orderItemInfo
+            ul.skuList
+              //li.waresInfo
+              //  .imgBox
+              //    img(src="{{skuList[0].url}}")
+              //  .txt
+              //    p {{skuList[0].skuname}}
+              //    p 价格:
+              //      span {{fyHelper skuList[0].unitprice}} * {{skuList[0].number}}
+              li
+                .tit 运费
+                .txt ￥{{freight}}
+              li
+                .tit 订单总价
+                .txt ￥{{fyHelper actualamount}}
+          p 订单信息
+          .orderItemInfo
+            ul
+              li
+                .tit 下单时间
+                .txt {{ordertime}}
+              li
+                .tit 发货时间
+                .txt {{launchtime}}
+          p 物流信息
+            .orderItemInfo
+              ul
+                li
+                  .tit 物流公司
+                  .txt 无
+                li
+                  .tit 快递单号
+                  .txt 无
+                li
+                  .tit 物流信息
+                  .txt 暂无物流跟踪数据
+

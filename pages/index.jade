@@ -1,0 +1,50 @@
+extends base/base
+block append base_head
+  title 微店
+block content
+  .views
+    .view.view-main
+      .navbar
+        .navbar-inner
+          .center.sliding 管理中心
+          .right
+            a(href="#").link.icon-only.open-panel
+              i.wdIcon.wdIconClass
+      .pages.navbar-through.toolbar-through
+        .page(data-page="index")
+          .page-content.weiDian
+            .wdHead
+              .weiDianUserName
+            .weiDianIndex
+              a(href="order.html")
+                img(src="pages/img/index1.png")
+                .indexShowNum 1
+                p 订单管理
+            .weiDianIndex
+              a(href="wares.html")
+                img(src="pages/img/index2.png")
+                p 商品管理
+  .login-screen
+    .view
+      .page
+        .page-content.login-screen-content
+          .loginLogo
+          .loginContent
+            .loginTit 登录
+            .itemInput
+              i.userIco
+              .inputBox
+                input#userName(type="text", placeholder="请输入帐号")
+            .itemInput
+              i.passwordIco
+              .inputBox
+                input#userPwd(type="password", placeholder="请输入密码")
+          .loginButton
+            .btnLogin#btnLogin 登录
+  .statusbar-overlay
+  .panel-overlay
+  .panel.panel-left.panel-reveal
+    .content-block.wdPanel
+      p
+        a.button(href="#") 退出登录
+block append base_foot

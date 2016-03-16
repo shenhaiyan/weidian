@@ -1,0 +1,74 @@
+.wdPanel{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.wdPanel{
+  .button{
+    color: #ff8500;
+    border-color: #ff8500;
+  }
+}
+.weiDian{
+  width:100%;
+  height:100%;
+  //background: url("/mt_mall/pages/img/login.svg") no-repeat ;
+  background-size:100% 100%;
+  background: #fff;
+  text-align: center;
+  .weiDianIndex{
+    float: left;
+    width: 50%;
+    //height: 40%;
+    text-align: center;
+    &:last-child{
+       position: relative;
+      &:after{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background: #a0a0a0;
+        display: block;
+        content: "";
+      }
+    }
+    a{
+      position: relative;
+      display: inline-block;
+      width: 150px;
+      height: 120px;
+      padding-top: 20px;
+      p{
+        color: #333333;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+.wdHead{
+  height: 150px;
+  width: 100%;
+  background: url("/mt_mall/pages/img/login.svg") no-repeat ;
+  background-size:100% auto;
+  margin-bottom: 20px;
+  .weiDianUserName{
+    color: #fff;
+    line-height: 150px;
+    font-size: 1rem;
+  }
+
+}
+.indexShowNum{
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  padding: 0 3px;
+  min-width: 25px;
+  height: 30px;
+  background-color: #f00;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+}

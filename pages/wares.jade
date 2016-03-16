@@ -1,0 +1,68 @@
+.navbar
+  .navbar-inner
+    .left
+      a(href="#").back.link
+        i.wdIcon.wdIconBack
+        span
+    .center
+      .buttons-row.waresNav
+        a(href="#sell" data-id="3").tab-link.active.button 出售中
+        a(href="#sellOut" data-id="4").tab-link.button 已下架
+.pages
+  .page(data-page="wares")
+    .page-content
+      .tabs
+        #sell.tab.active
+          .waresSort
+            .item.on 上架时间
+            .item 销量
+            .item 库存
+          .list-block.waresList
+            ul.waresSellLi
+              script(type="text/template7" id="waresSellList")
+                | {{#each this}}
+                li.swipeout
+                  .swipeout-content
+                    .orderLi
+                      .imgBox
+                        img(src="{{thumbnailimage}}")
+                      .orderTxt
+                        .tit {{skuname}}
+                        p.info
+                          span.price ￥{{fyHelper price}}
+                          span 上架: {{time}}
+                        p.info
+                          span 销量：{{totalsales}}
+                          span 库存：{{inventory}}
+                      .waresAdr
+                        p 所属小区：
+                          span {{communame}}
+                  .swipeout-actions-right
+                    a(href="#" id="{{skuid}}" data-state="{{putawaystate}}" data-communityid="{{communityid}}").edit 下架
+                | {{/each}}
+            .moreData 点击加载更多
+        #sellOut.tab
+          .list-block.waresList
+            ul.waresSellOutLi
+              script(type="text/template7" id="waresSellOutList")
+                | {{#each this}}
+                li.swipeout
+                  .swipeout-content
+                    .orderLi
+                      .imgBox
+                        img(src="{{thumbnailimage}}")
+                      .orderTxt
+                        .tit {{skuname}}
+                        p.info
+                          span.price ￥{{fyHelper price}}
+                          span 上架: {{time}}
+                        p.info
+                          span 销量：{{totalsales}}
+                          span 库存：{{inventory}}
+                      .waresAdr
+                        p 所属小区：
+                          span {{communame}}
+                  .swipeout-actions-right
+                    a(href="#" id="{{skuid}}" data-state="{{putawaystate}}" data-communityid="{{communityid}}").edit 上架
+                | {{/each}}
+            .moreData 点击加载更多
